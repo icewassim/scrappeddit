@@ -7,5 +7,7 @@
       templateUrl: "components/comment/comment.html"
     };
   }
-  angular.module('app.components').directive("commentSubreddit", commentSubreddit);
+  angular
+    .module('app.components')
+    .directive("commentSubreddit", commentSubreddit);
 })();

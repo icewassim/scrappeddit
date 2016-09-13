@@ -7,6 +7,7 @@
   <body>
     <div ng-controller="boardController as bctl">
       {{bctl.comments}}
+      <button ng-click="console.log(bctl.comments.length)">clickme</button>
     </div>
     <comment-subreddit></comment-subreddit>
     <script src="../node_modules/angular/angular.js"></script>

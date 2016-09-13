@@ -35,5 +35,7 @@
     };
   };
 
-  angular.module('app.core').factory('subredditService', subredditService);
+  angular
+    .module('app.core')
+    .factory('subredditService', subredditService);
 }());

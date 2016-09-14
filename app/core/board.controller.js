@@ -7,7 +7,7 @@
        subredditService.getPosts("/r/hello")
        .then(function(data) {
          comments = data;
-         console.log("2");
+         console.log(data);
         });
       }
 
@@ -26,14 +26,11 @@
       };
     }
 
-    init();
-    debugger;
     angular.extend(this, {
       comments: comments
     });
-    console.log("1");
 
-    comments.push({a:1})
+    init();
   }
 
   angular

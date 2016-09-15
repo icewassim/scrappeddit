@@ -34,8 +34,7 @@
       return {
         r: parseInt(Math.random()*255),
         g: parseInt(Math.random()*255),
-        b: parseInt(Math.random()*255),
-        a: 1
+        b: parseInt(Math.random()*255)
       };
     }
 
@@ -51,8 +50,7 @@
     }
 
     function _genFontSize(score, minScore, MaxScore) {
-      if(typeOf score !== 'number' || typeOf minScore !== 'number' || typeOf MaxScore !== 'number')
-        return false;
+      
     }
 
     init();

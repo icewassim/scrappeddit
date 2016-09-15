@@ -13,6 +13,7 @@
   "author": "icewassim",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.8"
+    "angular": "^1.5.8",
+    "masonry-layout": "^4.1.1"
   }
 }

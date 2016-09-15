@@ -71,70 +71,70 @@
 
 @font-face{
 	font-family:pops_08_BOLD;
-	src: url('../fonts/awesome/pops_08_BOLD.ttf');
+	src: url('../fonts/pops_08_BOLD.ttf');
 
 }
 
 @font-face{
 	font-family:pops_08_REGULAR;
-	src: url('../fonts/awesome/pops_08_REGULAR.ttf');
+	src: url('../fonts/pops_08_REGULAR.ttf');
 
 }
 
 @font-face{
 	font-family:Scribulous_Scrawlin___by_Alphabeta85;
-	src: url('../fonts/awesome/Scribulous_Scrawlin___by_Alphabeta85.ttf');
+	src: url('../fonts/Scribulous_Scrawlin___by_Alphabeta85.ttf');
 
 }
 
 @font-face{
 	font-family:Mawns_Handwriting;
-	src: url('../fonts/awesome/Mawns_Handwriting.ttf');
+	src: url('../fonts/Mawns_Handwriting.ttf');
 
 }
 
 
 @font-face{
 	font-family:LSTKGarPenTin;
-	src: url('../fonts/awesome/LSTKGarPenTin.otf');
+	src: url('../fonts/LSTKGarPenTin.otf');
 
 }
 
 
 @font-face{
 	font-family:Linny;
-	src: url('../fonts/awesome/Linny.ttf');
+	src: url('../fonts/Linny.ttf');
 
 }
 
 
 @font-face{
 	font-family:HappyFox-Condensed;
-	src: url('../fonts/awesome/HappyFox-Condensed.otf');
+	src: url('../fonts/HappyFox-Condensed.otf');
 
 }
 
 @font-face{
 	font-family:GoodDog;
-	src: url('../fonts/awesome/GoodDog.otf');
+	src: url('../fonts/GoodDog.otf');
 
 }
 
 @font-face{
 	font-family:FATSB___;
-	src: url('../fonts/awesome/FATSB___.ttf');
+	src: url('../fonts/FATSB___.ttf');
 
 }
 
 @font-face{
 	font-family:danielbk;
-	src: url('../fonts/awesome/danielbk.ttf');
+	src: url('../fonts/danielbk.ttf');
 
 }
 
 @font-face{
 	font-family:ArchitectsDaughter;
-	src: url('../fonts/awesome/ArchitectsDaughter.ttf');
+	src: url('../fonts/ArchitectsDaughter.ttf');
 
 }
 
@@ -146,6 +146,8 @@
 
 @font-face{
 	font-family:Chomp;
-	src: url('../fonts/awesome/Chomp.ttf');
+	src: url('../fonts/Chomp.ttf');
 
 }
+
+.grid-item { width: 200px; }

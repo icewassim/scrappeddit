@@ -3,13 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>data-framework="angularjs"</title>
+    <link rel="stylesheet" type="text/css" href="../css/fonts.css">
   </head>
   <body>
     <div ng-controller="boardController as bctl">
-      {{bctl.comments}}
+      <div ng-repeat="comment in bctl.comments">
+        <comment-subreddit comment="comment"></comment-subreddit>
+        <br>
+      </div>
       <button ng-click="console.log(bctl.comments.length)">clickme</button>
     </div>
-    <comment-subreddit></comment-subreddit>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="index.module.js"></script>
     <script src="core/core.module.js"></script>

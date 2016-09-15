@@ -4,7 +4,11 @@
   var commentSubreddit = function() {
     return {
       restrict: "E",
-      templateUrl: "components/comment/comment.html"
+      scope:{
+        comment: "="
+      },
+      templateUrl: "components/comment/comment.html",
+      controllerAs: 'vm',
     };
   }
   angular

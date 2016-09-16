@@ -1,17 +1,15 @@
 (function(){
   'use strict';
+
   var boardController = function($scope, subredditService) {
+    var boardCtrl = this;
 
-    var comments = [];
-
-    var init = function() {
+    function init() {
       subredditService.getPosts("/r/hello")
       .then(function(data) {
-        angular.extend(this, {
-          comments: data.map(_randomizeComments)
-        });
-      }.bind(this));
-    }.bind(this);
+        boardCtrl.comments = data.map(_randomizeComments)
+      });
+    };
 
     function _randomizeComments(comment) {
       return angular.extend(comment, {
@@ -50,11 +48,13 @@
     }
 
     function _genFontSize(score, minScore, MaxScore) {
-      
+
     }
 
     init();
   };
+
+  boardController.$inject = ['$scope', 'subredditService'];
 
   angular
     .module('app.core')

@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  var boardController = function($scope, subredditService) {
+  var boardController = function() {
     var boardCtrl = this;
 
     function init() {

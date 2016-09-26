@@ -16,7 +16,9 @@
         color: _genRandomColor(),
         position: _genRandomPosition(),
         font: _genRandomFont(),
-        rotation: _genRandomRotation()
+        rotation: _genRandomRotation(),
+        width: _getRandomWidth(),
+        fontSize: _getRandomFontsize()
       });
     }
 
@@ -43,8 +45,16 @@
       };
     }
 
+    function _getRandomWidth() {
+      return parseInt(Math.random()*300);
+    }
+
+    function _getRandomFontsize() {
+      return Math.max(parseInt(Math.random()*25),15);
+    }
+
     function _genRandomRotation(argument) {
-      return parseInt(Math.random()*90) - 45;
+      return parseInt(Math.random()*10) - 5;
     }
 
     function _genFontSize(score, minScore, MaxScore) {

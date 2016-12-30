@@ -8,13 +8,13 @@
                 'COLUMN_SIZE': 5,
             }
         })
-        .controller('boardController', ['$scope', 'subredditService', 'commentsService', 'BOARD_CONFIG', boardController]);
+        .controller('boardController', ['$scope','$routeParams', 'subredditService', 'commentsService', 'BOARD_CONFIG', boardController]);
 
-    function boardController($scope, subredditService, commentsService, BOARD_CONFIG) {
+    function boardController($scope, $routeParams, subredditService, commentsService, BOARD_CONFIG) {
         var boardCtrl = this;
 
         function init() {
-            subredditService.getPosts("/r/hello")
+            subredditService.getPosts($routeParams.subreddit, $routeParams.threadId)
                 .then(function(data) {
                     boardCtrl.comments = commentsService.randomizeComments(data);
                 });
@@ -24,10 +24,10 @@
 
         // TODO: rplace with dom is ready
         setTimeout(function(){
-            requirejs( [
+            requirejs([
               'app/libs/isotope.pkgd',
             ], function( Isotope ) {
-                  var iso = new Isotope( '.grid',{
+                  var iso = new Isotope('.grid',{
                       itemSelector: '.grid-item',
                       percentPosition: true,
                       masonry: {

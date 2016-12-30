@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+     "type": "git",
+     "url": "git+https://github.com/icewassim/scrappeddit.git"
+  },
   "keywords": [
     "reddit",
     "scribbling"
@@ -13,7 +17,6 @@
   "author": "icewassim",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.8",
-    "masonry-layout": "^4.1.1"
+    "bower": "^1.8.0",
   }
 }

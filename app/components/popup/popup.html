@@ -1,0 +1,33 @@
+<div id="popoverComment" ng-show="content" class="popover" style="top: {{coordinates.position.top}}px; left: {{coordinates.position.left}}px; display: initial;position:absolute">
+  <div class="arrow arrow-top"></div>
+  <h3 class="popover-title">
+    <a class="comment-owner">
+        {{content.author}}{{placement}}
+        <img class="comment-thumbnail" ng-src="http://scribbler.elwiss.me/avatars/jackson.jpg" style="border-radius:50%" src="http://.scribbler.elwiss.me//avatars/terminator.jpg">
+    </a>
+    <br>
+    <span style="text-transform: none;">
+      <span id="hoveredDescription" >
+          {{content.body | limitTo:150 }}
+           <span ng-show="content.body.length > 150">
+               ...
+               <a style="color:#65a0d3;margin-left:5px;">read more</a>
+           </span>
+      </span>
+    </span>
+    <div class="small-menu-icons" style="display:inherit;top:initial;bottom:5px;">
+    <span>
+    </span>
+       </div>
+  </h3>
+  <div class="popover-content">
+    <span class="popover-score">
+        {{content.score}}
+    </span>
+    <span class="notif-date">1 year ago</span></span>
+    <span style="visibility:hidden;">m</span>
+    <a class="read-comments">
+        <span>20</span>comments
+    </a>
+  </div>
+</div>

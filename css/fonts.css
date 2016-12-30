@@ -150,4 +150,13 @@
 
 }
 
-.grid-item { width: 200px; }
+.boxx {
+	max-width: 210px;
+	float: right;
+	margin: -7px;
+	display: block;
+}
+
+
+.grid-item--width2 { width: 40%; }
+.grid-item--height2 { height: 200px; }

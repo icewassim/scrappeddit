@@ -1,17 +1,23 @@
 (function(){
   'use strict';
 
-  var commentSubreddit = function() {
-    return {
-      restrict: "E",
-      scope:{
-        comment: "="
-      },
-      templateUrl: "components/comment/comment.html",
-      controllerAs: 'vm',
-    };
-  }
   angular
     .module('app.components')
-    .directive("commentSubreddit", commentSubreddit);
+    .directive('commentSubreddit', ['commentsService', commentSubreddit]);
+
+  function commentSubreddit(commentsService) {
+    return {
+        restrict: 'E',
+        replace: true,
+        scope:{
+            comment: '='
+        },
+        templateUrl: 'components/comment/comment.html',
+        link: function(scope, element, attr) {
+            scope.onHover = function (comment) {
+                commentsService.setHoveredComment(comment, this);
+            }.bind(element);
+        },
+    };
+  }
 })();

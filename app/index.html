@@ -2,24 +2,25 @@
 <html ng-app="app" data-framework="angularjs">
   <head>
     <meta charset="utf-8">
-    <title>data-framework="angularjs"</title>
+    <title>ScrapReddit</title>
     <link rel="stylesheet" type="text/css" href="../css/fonts.css">
   </head>
   <body>
-    <div ng-controller="boardController as bctl" id="container">
-      <div ng-repeat="comment in bctl.comments" >
-        <comment-subreddit comment="comment"></comment-subreddit>
-      </div>
-      <button ng-click="console.log(bctl.comments.length)">clickme</button>
+    <div ng-controller="boardController as bctl" class="grid">
+        <div class="grid-sizer"></div>
+        <comment-subreddit ng-repeat="comment in bctl.comments"  comment="comment"></comment-subreddit>
+        <popup-hover hovered-comment="bctl.hoveredComment"></popup-hover>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="libs/jquery.nested.js"></script>
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/isotope.pkgd.js"></script>
     <script src="../node_modules/angular/angular.js"></script>
     <script src="index.module.js"></script>
     <script src="core/core.module.js"></script>
     <script src="components/components.module.js"></script>
     <script src="components/comment/comment.directive.js"></script>
-    <script src="core/board.controller.js"></script>
+    <script src="components/popup/popup.directive.js"></script>
     <script src="core/subreddit.service.js"></script>
+    <script src="core/comments.service.js"></script>
+    <script src="core/board.controller.js"></script>
   </body>
 </html>

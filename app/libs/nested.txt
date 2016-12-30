@@ -1,4 +1,0 @@
-$("#container").nested({selector: '.box',minWidth:150,resizeToFit: true,
-  resizeToFitOptions: {
-    resizeAny: true
-  }});

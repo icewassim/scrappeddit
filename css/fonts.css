@@ -1,6 +1,6 @@
 @font-face{
-	font-family:comesinhandy;
-	src: url('../fonts/comesinhandy.ttf');
+	font-family:REIS-Regular;
+	src: url('../fonts/REIS-Regular.ttf');
 }
 
 @font-face{
@@ -40,12 +40,6 @@
 }
 
 @font-face{
-	font-family:BrookeS;
-	src: url('../fonts/BrookeS8.ttf');
-
-}
-
-@font-face{
 	font-family:JennaSue;
 	src: url('../fonts/JennaSue.ttf');
 
@@ -64,9 +58,8 @@
 }
 
 @font-face{
-	font-family:the_quiet_scream;
-	src: url('../fonts/the_quiet_scream.ttf');
-
+	font-family:whatever_it_takes;
+	src: url('../fonts/whatever_it_takes.ttf');
 }
 
 @font-face{
@@ -102,8 +95,8 @@
 
 
 @font-face{
-	font-family:Linny;
-	src: url('../fonts/Linny.ttf');
+	font-family:Ludicrous;
+	src: url('../fonts/Ludicrous.ttf');
 
 }
 
@@ -150,6 +143,13 @@
 
 }
 
+@font-face{
+	font-family:stay_writer;
+	src: url('../fonts/Stay_Writer.ttf');
+
+}
+
+
 .boxx {
 	max-width: 210px;
 	float: right;
@@ -157,6 +157,142 @@
 	display: block;
 }
 
+.grid-item{
+	float: left;
+}
 
 .grid-item--width2 { width: 40%; }
 .grid-item--height2 { height: 200px; }
+
+body{
+	/*background-image: url("http://scribbler.elwiss.me/pictures/background/paper1.jpg");*/
+	background-image: url('../pics/board.jpg');
+}
+
+.popover-title {
+	margin-top: 0px;
+	font-size: 12px;
+	min-height: 100px;
+	color: #9B9B9B;
+	padding: 8px 8px;
+	padding-right: 65px;
+	font-weight: 400;
+	line-height: 18px;
+	background-color: #f7f7f7;
+	border-bottom: 1px solid #ebebeb;
+	border-radius: 5px 5px 0 0;
+}
+
+
+.popover-content {
+	display: block;
+    min-height: 26px;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+
+.comment-owner {
+    margin-right: 5px;
+	color: #65a0d3;
+    font-weight: bold;
+}
+
+
+.popover{
+	position: absolute;
+    top: 0;
+    left: 50px;
+    z-index: 1010;
+    display: none;
+	border-radius: 0px;
+    padding: 1px;
+    text-align: left;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.2);
+	font-family: sans-serif;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    white-space: normal;
+	width: 300px;
+	height:128px;
+}
+
+#hoveredDescription {
+	color: black;
+	font-weight: normal;
+}
+
+.popover .read-comments {
+	right: 5px;
+    position: absolute;
+    color: #65a0d3;
+    bottom: 6px;
+    font-size: 12px;
+}
+
+.notif-date {
+	position: absolute;
+    bottom: 28px;
+    right: 5px;
+    font-size: 11px;
+    color: grey;
+}
+
+.popover.bottom>.arrow {
+    left: 50%;
+    margin-left: -11px;
+    border-top-width: 0;
+    top: -11px;
+}
+
+.popover.top>.arrow {
+    left: 50%;
+    margin-left: -11px;
+    border-bottom-width: 0;
+    bottom: -11px;
+}
+
+.popover>.arrow {
+    border-width: 11px;
+	border-bottom-color: white;
+}
+.popover>.arrow, .popover>.arrow:after {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+
+
+
+.comment-thumbnail {
+    background-color: white;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: 10px;
+    height: 54px;
+    width: 54px;
+    border-radius: 50%;
+}
+
+.popover-score {
+	color: white;
+    background-color: #428bca;
+    padding: 4px;
+    position: absolute;
+    left: -1px;
+    font-size: 15px;
+    padding-top: 5px;
+}

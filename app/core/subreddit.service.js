@@ -31,8 +31,8 @@
     var getPosts = function(subredditId ) {
 
       //return $http.get("https://www.reddit.com/r/AskReddit/comments/5i5csd/what_is_your_i_know_it_sounds_weird_but_just_try.json")
-      return $http.get("../mock/subreddit.json")
-      //return $http.get("https://www.reddit.com/r/AskReddit/comments/5kdfsf/people_whove_deleted_facebook_what_was_the_final.json")
+     // return $http.get("../mock/subreddit.json")
+      return $http.get("https://www.reddit.com/r/AskReddit/comments/5kdfsf/people_whove_deleted_facebook_what_was_the_final.json")
                   .then(function(result){
         try{
           return result.data[1].data.children

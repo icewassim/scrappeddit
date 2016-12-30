@@ -12,7 +12,7 @@
         scope:{
             comment: '='
         },
-        templateUrl: 'components/comment/comment.html',
+        templateUrl: 'app/components/comment/comment.html',
         link: function(scope, element, attr) {
             scope.onHover = function (comment) {
                 commentsService.setHoveredComment(comment, this);

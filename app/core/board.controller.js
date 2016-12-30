@@ -24,13 +24,18 @@
 
         // TODO: rplace with dom is ready
         setTimeout(function(){
-            $('.grid').isotope({
-                itemSelector: '.grid-item',
-                percentPosition: true,
-                masonry: {
-                  columnWidth: BOARD_CONFIG.MASONRY.COLUMN_SIZE
-                }
-              });
+            requirejs( [
+              'app/libs/isotope.pkgd',
+            ], function( Isotope ) {
+                  var iso = new Isotope( '.grid',{
+                      itemSelector: '.grid-item',
+                      percentPosition: true,
+                      masonry: {
+                          columnWidth: BOARD_CONFIG.MASONRY.COLUMN_SIZE
+                      }
+                  });
+            });
+
         }, 6000);
       };
 }());

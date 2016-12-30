@@ -10,7 +10,7 @@
             restrict: 'E',
             replace: true,
             scope: {},
-            templateUrl: 'components/popup/popup.html',
+            templateUrl: 'app/components/popup/popup.html',
             controller: ['$scope', 'commentsService', function($scope, commentsService) {
                 $scope.$watch(function() {
                     return commentsService.getHoveredComment();

@@ -13,6 +13,7 @@
     function boardController($scope, $routeParams, subredditService, commentsService, BOARD_CONFIG) {
         var boardCtrl = this;
 
+        boardCtrl.comments = [];
         function init() {
             subredditService.getPosts($routeParams.subreddit, $routeParams.threadId)
                 .then(function(data) {

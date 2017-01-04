@@ -24,7 +24,9 @@
     }
 
     function formatSubredditUrl(subredditId, threadId) {
-        return 'https://www.reddit.com/r/'+ subredditId + '/comments/'+ threadId +'.json';
+        var baseURL = 'https://api.reddit.com/r/';
+        //var baseURL =  https://api.reddit.com/r/AskReddit/comments/5aih71
+        return baseURL + subredditId + '/comments/'+ threadId +'.json';
     }
 
     function filterEmptyData(comment) {

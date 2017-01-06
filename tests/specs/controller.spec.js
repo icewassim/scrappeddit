@@ -6,7 +6,7 @@ describe('Controller testing', function(){
 
     beforeEach(function(){
         module('app.core')
-    })
+    });
 
     beforeEach(inject(function ($rootScope, $controller, _$timeout_, _$q_) {
         var  commentsService,

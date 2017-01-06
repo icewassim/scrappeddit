@@ -1,22 +1,37 @@
 {
   "name": "scrappeddit",
   "version": "1.0.0",
-  "description": "reddit scrapbook",
-  "main": "app.js",
+  "description": "reddit on board",
+  "main": "main.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "angular": "^1.5.6",
+    "angular-mocks": "^1.5.6",
+    "angular-ui-router": "^0.3.0",
+    "bootstrap": "^3.3.6",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-jshint-preprocessor": "0.0.6",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/karma/bin/karma start"
   },
   "repository": {
-     "type": "git",
-     "url": "git+https://github.com/icewassim/scrappeddit.git"
+    "type": "git",
+    "url": "git+https://github.com/icewassim/scrappeddit.git"
   },
-  "keywords": [
-    "reddit",
-    "scribbling"
-  ],
   "author": "icewassim",
   "license": "ISC",
-  "dependencies": {
-    "bower": "^1.8.0",
-  }
+  "bugs": {
+    "url": "https://github.com/icewassim/scrappeddit/issues"
+  },
+  "homepage": "https://github.com/icewassim/scrappeddit#readme"
 }

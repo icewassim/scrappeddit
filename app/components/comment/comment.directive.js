@@ -1,9 +1,9 @@
 (function(){
-  'use strict';
+  "use strict";
 
   angular
-    .module('app.components')
-    .directive('commentSubreddit', ['commentsService', commentSubreddit]);
+    .module("app.components")
+    .directive("commentSubreddit", ["commentsService", commentSubreddit]);
 
   function commentSubreddit(commentsService) {
     return {
@@ -12,7 +12,7 @@
         scope:{
             comment: '='
         },
-        templateUrl: 'app/components/comment/comment.html',
+        templateUrl: "app/components/comment/comment.html",
         link: function(scope, element, attr) {
             scope.onHover = function (comment) {
                 commentsService.setHoveredComment(comment, this);

@@ -1,9 +1,9 @@
 (function () {
-  'use strict';
+  "use strict";
 
   angular
-    .module('app.core')
-    .factory('subredditService', ['$http', subredditService]);
+    .module("app.core")
+    .factory("subredditService", ["$http", subredditService]);
 
    function subredditService($http) {
     var _mapSubData = function(child) {
@@ -24,9 +24,9 @@
     }
 
     function formatSubredditUrl(subredditId, threadId) {
-        var baseURL = 'https://api.reddit.com/r/';
+        var baseURL = "https://api.reddit.com/r/";
         //var baseURL =  https://api.reddit.com/r/AskReddit/comments/5aih71
-        return baseURL + subredditId + '/comments/'+ threadId +'.json';
+        return baseURL + subredditId + "/comments/"+ threadId +".json";
     }
 
     function filterEmptyData(comment) {
@@ -53,6 +53,6 @@
     return {
       getPosts: getPosts
     }
-  };
+  }
 
 }());

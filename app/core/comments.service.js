@@ -1,22 +1,22 @@
 (function () {
-  'use strict';
+  "use strict";
 
   angular
-    .module('app.core')
-    .constant('COMMENT_CONFIG', {
+    .module("app.core")
+    .constant("COMMENT_CONFIG", {
         MIN_FONT_SIZE: 20,
         PLACEMENT: {
-            BOTTOM: 'bottom',
-            TOP: 'top',
-            RIGHT: 'right',
-            LEFT: 'left'
+            BOTTOM: "bottom",
+            TOP: "top",
+            RIGHT: "right",
+            LEFT: "left"
         },
         DEFAULT_SCORE: {
-            'MAX': 1000,
-            'MIN': 0
+            "MAX": 1000,
+            "MIN": 0
         },
     })
-    .service('commentsService', ['COMMENT_CONFIG', commentsService]);
+    .service("commentsService", ["COMMENT_CONFIG", commentsService]);
 
   function commentsService(COMMENT_CONFIG) {
       this.hoveredComment =  {};
@@ -64,7 +64,7 @@
 
 
     function getPopupCoordinates(commentPosition, commentOffset , commentSize) {
-          var placement = '',
+          var placement = "",
               position = {};
 
           if(!commentPosition || !commentOffset || !commentSize) {

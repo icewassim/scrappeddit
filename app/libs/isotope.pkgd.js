@@ -17,7 +17,7 @@
 /* jshint browser: true, strict: true, undef: true, unused: true */
 
 ( function( window, factory ) {
-  'use strict';
+  "use strict";
   /* globals define: false, module: false, require: false */
 
   if ( typeof define == 'function' && define.amd ) {
@@ -40,7 +40,7 @@
   }
 
 }( window, function factory( window, jQuery ) {
-'use strict';
+"use strict";
 
 // ----- utils ----- //
 
@@ -273,7 +273,7 @@ return EvEmitter;
 /*global define: false, module: false, console: false */
 
 ( function( window, factory ) {
-  'use strict';
+  "use strict";
 
   if ( typeof define == 'function' && define.amd ) {
     // AMD
@@ -289,7 +289,7 @@ return EvEmitter;
   }
 
 })( window, function factory() {
-'use strict';
+"use strict";
 
 // -------------------------- helpers -------------------------- //
 
@@ -483,7 +483,7 @@ return getSize;
 
 ( function( window, factory ) {
   /*global define: false, module: false */
-  'use strict';
+  "use strict";
   // universal module definition
   if ( typeof define == 'function' && define.amd ) {
     // AMD
@@ -497,7 +497,7 @@ return getSize;
   }
 
 }( window, function factory() {
-  'use strict';
+  "use strict";
 
   var matchesMethod = ( function() {
     var ElemProto = Element.prototype;
@@ -795,7 +795,7 @@ return utils;
   }
 
 }( window, function factory( EvEmitter, getSize ) {
-'use strict';
+"use strict";
 
 // ----- helpers ----- //
 
@@ -1325,7 +1325,7 @@ return Item;
  */
 
 ( function( window, factory ) {
-  'use strict';
+  "use strict";
   // universal module definition
   /* jshint strict: false */ /* globals define, module, require */
   if ( typeof define == 'function' && define.amd ) {
@@ -1361,7 +1361,7 @@ return Item;
   }
 
 }( window, function factory( window, EvEmitter, getSize, utils, Item ) {
-'use strict';
+"use strict";
 
 // ----- vars ----- //
 
@@ -2285,7 +2285,7 @@ return Outlayer;
   }
 
 }( window, function factory( Outlayer ) {
-'use strict';
+"use strict";
 
 // -------------------------- Item -------------------------- //
 
@@ -2366,7 +2366,7 @@ return Item;
   }
 
 }( window, function factory( getSize, Outlayer ) {
-  'use strict';
+  "use strict";
 
   // layout mode class
   function LayoutMode( isotope ) {
@@ -2731,7 +2731,7 @@ return Item;
   }
 
 }( window, function factory( LayoutMode, Masonry ) {
-'use strict';
+"use strict";
 
 // -------------------------- masonryDefinition -------------------------- //
 
@@ -2801,7 +2801,7 @@ return Item;
   }
 
 }( window, function factory( LayoutMode ) {
-'use strict';
+"use strict";
 
 var FitRows = LayoutMode.create('fitRows');
 
@@ -2870,7 +2870,7 @@ return FitRows;
   }
 
 }( window, function factory( LayoutMode ) {
-'use strict';
+"use strict";
 
 var Vertical = LayoutMode.create( 'vertical', {
   horizontalAlignment: 0

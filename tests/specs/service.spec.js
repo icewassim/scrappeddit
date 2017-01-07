@@ -1,9 +1,9 @@
-describe('subreddit service', function () {
+describe("subreddit service", function () {
     var subredditService,
         httpBackend;
 
     beforeEach(function(){
-        module('app.core')
+        module("app.core")
     });
 
 
@@ -12,30 +12,30 @@ describe('subreddit service', function () {
         httpBackend = $httpBackend;
     }));
 
-    it('should map comments from api ', function() {
+    it("should map comments from api ", function() {
             httpBackend.whenGET("https://api.reddit.com/r/AskReddit/comments/5aih71.json").respond([1,{
                 data: {
                     children: [{
                             data: {
-                                author: 'testAuthor',
-                                created: 'child.data.created',
-                                edited: 'child.data.edited',
-                                score: 'child.data.score',
-                                ups: 'child.data.ups',
-                                lol:'dsqdsq',
-                                dsqds:'dqsdsq',
-                                body: 'child.data.bod'
+                                author: "testAuthor",
+                                created: "child.data.created",
+                                edited: "child.data.edited",
+                                score: "child.data.score",
+                                ups: "child.data.ups",
+                                lol:"dsqdsq",
+                                dsqds:"dqsdsq",
+                                body: "child.data.bod"
                             }
                         },
                         {
                             data: {
-                                author: 'testAuthor',
-                                created: 'child.data.created',
-                                edited: 'child.data.edited',
-                                score: 'child.data.score',
-                                ups: 'child.data.ups',
-                                qdsqdsq:'dsqds',
-                                body: 'child.data.bod'
+                                author: "testAuthor",
+                                created: "child.data.created",
+                                edited: "child.data.edited",
+                                score: "child.data.score",
+                                ups: "child.data.ups",
+                                qdsqdsq:"dsqds",
+                                body: "child.data.bod"
                             }
                         }
                     ]
@@ -44,12 +44,12 @@ describe('subreddit service', function () {
 
            subredditService.getPosts("AskReddit","5aih71").then(function(data){
                 expect(data[0]).toEqual({
-                        author: 'testAuthor',
-                        created:'child.data.created',
-                        edited:'child.data.edited',
-                        score:'child.data.score',
-                        ups:'child.data.ups',
-                        body:'child.data.bod'
+                        author: "testAuthor",
+                        created:"child.data.created",
+                        edited:"child.data.edited",
+                        score:"child.data.score",
+                        ups:"child.data.ups",
+                        body:"child.data.bod"
                     });
                 expect(data.length).toBe(2);
             });
@@ -57,26 +57,26 @@ describe('subreddit service', function () {
             httpBackend.flush();
     });
 
-    it('should filter empty  comments  ', function() {
+    it("should filter empty  comments  ", function() {
             httpBackend.whenGET("https://api.reddit.com/r/AskReddit/comments/5aih71.json").respond([1,{
                data: {
                    children: [{
                            data: {
-                               author: 'testAuthor',
-                               created: 'child.data.created',
-                               edited: 'child.data.edited',
+                               author: "testAuthor",
+                               created: "child.data.created",
+                               edited: "child.data.edited",
                                score: 223,
-                               ups: 'child.data.ups',
-                               body: 'child.data.bod'
+                               ups: "child.data.ups",
+                               body: "child.data.bod"
                            }
                        },
                        {
                            data: {
-                               author: 'testAuthor',
-                               created: 'child.data.created',
-                               edited: 'child.data.edited',
+                               author: "testAuthor",
+                               created: "child.data.created",
+                               edited: "child.data.edited",
                                score: 22,
-                               ups: 'child.data.ups',
+                               ups: "child.data.ups",
                            }
                        }
                    ]
@@ -89,7 +89,7 @@ describe('subreddit service', function () {
             httpBackend.flush();
     });
 
-    it('should handle empty  response', function() {
+    it("should handle empty  response", function() {
             httpBackend.whenGET("https://api.reddit.com/r/AskReddit/comments/5aih71.json").respond([1,{
                data: {
                }
@@ -101,24 +101,24 @@ describe('subreddit service', function () {
             httpBackend.flush();
     });
 
-    it('should sort comments  by body length', function() {
+    it("should sort comments  by body length", function() {
             httpBackend.whenGET("https://api.reddit.com/r/AskReddit/comments/5aih71.json").respond([1,{
                 data: {
                     children: [{
                             data: {
                                 score: 223,
-                                body: 'dsdsqdsqdsqdsbod'
+                                body: "dsdsqdsqdsqdsbod"
                             }
                         },
                         {
                             data: {
-                                body: 'chdsddsqdqdsqdsqildsqbod',
+                                body: "chdsddsqdqdsqdsqildsqbod",
                                 score: 324,
                             }
                         },
                         {
                             data: {
-                                body: 'chta.bod',
+                                body: "chta.bod",
                                 score: 0,
                             }
                         },

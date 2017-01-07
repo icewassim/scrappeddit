@@ -13,7 +13,7 @@
             comment: '='
         },
         templateUrl: "app/components/comment/comment.html",
-        link: function(scope, element, attr) {
+        link: function(scope, element) {
             scope.onHover = function (comment) {
                 commentsService.setHoveredComment(comment, this);
             }.bind(element);

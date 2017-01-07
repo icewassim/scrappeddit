@@ -28,7 +28,7 @@
             requirejs([
               "app/libs/isotope.pkgd",
             ], function( Isotope ) {
-                  var iso = new Isotope(".grid",{
+                  new Isotope(".grid",{
                       itemSelector: ".grid-item",
                       percentPosition: true,
                       masonry: {

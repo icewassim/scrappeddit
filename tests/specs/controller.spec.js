@@ -1,11 +1,11 @@
-describe('Controller testing', function(){
+describe("Controller testing", function(){
     var scope,
-        $controller,
+        controller,
         boardController,
         BOARD_CONFIG = {};
 
     beforeEach(function(){
-        module('app.core')
+        module("app.core")
     });
 
     beforeEach(inject(function ($rootScope, $controller, _$timeout_, _$q_) {
@@ -13,6 +13,7 @@ describe('Controller testing', function(){
              subredditService;
 
         scope = $rootScope.$new();
+        controller = $controller;
         commentsService = {};
         subredditService  = {
             getPosts: function() {
@@ -21,24 +22,24 @@ describe('Controller testing', function(){
             }
         };
 
-        boardController =  $controller('boardController', {
-            'commentsService': commentsService,
-            'subredditService': subredditService,
-            'BOARD_CONFIG': BOARD_CONFIG,
-            '$scope': scope
+        boardController =  controller("boardController", {
+            "commentsService": commentsService,
+            "subredditService": subredditService,
+            "BOARD_CONFIG": BOARD_CONFIG,
+            "$scope": scope
         });
     }));
 
-    describe('default state testing', function() {
-        it('should be defined', function () {
+    describe("default state testing", function() {
+        it("should be defined", function () {
             expect(2).toEqual(2);
             //expect(boardController).toBeDefined();
         });
 
 
-        it('should have an Empty Comments Array by default', function () {
+        it("should have an Empty Comments Array by default", function () {
             expect(boardController.comments).toBeDefined();
-            expect(typeof boardController.comments).toBe('object');
+            expect(typeof boardController.comments).toBe("object");
             expect(boardController.comments.length).toBe(0);
         });
 

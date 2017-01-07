@@ -139,11 +139,7 @@
           return _rand(300, 150);
       }
 
-      function _getRandomFontsize() {
-          return _rand(20, 10);
-      }
-
-      function _genRandomRotation(argument) {
+      function _genRandomRotation() {
           return _rand(10, -5);
       }
 

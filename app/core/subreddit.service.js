@@ -18,7 +18,7 @@
       }
     }
 
-    var function _sortSubData(firstItem, secondItem) {
+    function _sortSubData(firstItem, secondItem) {
       //TODO Sort By attribute
       return secondItem.body.length - firstItem.body.length;
     }

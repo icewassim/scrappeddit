@@ -16,7 +16,7 @@
         // replies:child.data.replies,
         body:child.data.body
       }
-    };
+    }
 
     var _sortSubData = function(firstItem, secondItem) {
       //TODO Sort By attribute

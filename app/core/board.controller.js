@@ -19,7 +19,7 @@
                 .then(function(data) {
                     boardCtrl.comments = commentsService.randomizeComments(data);
                 });
-            };
+            }
 
         init();
 

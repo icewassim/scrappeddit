@@ -23,7 +23,6 @@ module.exports = function(config) {
         'app/core/board.controller.js',
         'app/core/subreddit.service.js',
         './tests/specs/*.js',
-        './tests/hello.spec.js'
     ],
 
 

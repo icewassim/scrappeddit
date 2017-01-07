@@ -7,10 +7,10 @@
 
   function commentSubreddit(commentsService) {
     return {
-        restrict: 'E',
+        restrict: "E",
         replace: true,
         scope:{
-            comment: '='
+            comment: "="
         },
         templateUrl: "app/components/comment/comment.html",
         link: function(scope, element) {

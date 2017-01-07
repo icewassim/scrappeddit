@@ -3,7 +3,7 @@ describe("subreddit service", function () {
         httpBackend;
 
     beforeEach(function(){
-        module("app.core")
+        module("app.core");
     });
 
 
@@ -85,7 +85,7 @@ describe("subreddit service", function () {
 
            subredditService.getPosts("AskReddit","5aih71").then(function(data){
                 expect(data.length).toBe(1);
-            })
+            });
             httpBackend.flush();
     });
 

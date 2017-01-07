@@ -7,7 +7,7 @@
 
     function popupHover() {
         return {
-            restrict: 'E',
+            restrict: "E",
             replace: true,
             scope: {},
             templateUrl: "app/components/popup/popup.html",
@@ -28,7 +28,7 @@
                     };
                 });
             }]
-        }
+        };
     }
 
-})()
+})();

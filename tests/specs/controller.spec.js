@@ -5,7 +5,7 @@ describe("Controller testing", function(){
         BOARD_CONFIG = {};
 
     beforeEach(function(){
-        module("app.core")
+        module("app.core");
     });
 
     beforeEach(inject(function ($rootScope, $controller, _$timeout_, _$q_) {
@@ -32,8 +32,7 @@ describe("Controller testing", function(){
 
     describe("default state testing", function() {
         it("should be defined", function () {
-            expect(2).toEqual(2);
-            //expect(boardController).toBeDefined();
+            expect(boardController).toBeDefined();
         });
 
 

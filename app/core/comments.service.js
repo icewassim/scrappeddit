@@ -36,7 +36,7 @@
           this.hoveredComment.size = {
               width: element.width() ,
               height: element.height(),
-          }
+          };
       }
 
       function getHoveredComment() {

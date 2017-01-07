@@ -28,13 +28,14 @@
             requirejs([
               "app/libs/isotope.pkgd",
             ], function( Isotope ) {
-                  new Isotope(".grid",{
+                var iso  = new Isotope(".grid",{
                       itemSelector: ".grid-item",
                       percentPosition: true,
                       masonry: {
                           columnWidth: BOARD_CONFIG.MASONRY.COLUMN_SIZE
                       }
                   });
+                iso();
             });
 
         }, 6000);

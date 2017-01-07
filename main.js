@@ -1,19 +1,19 @@
-'use strict';
+"use strict";
 
 require.config({
 	paths: {
-		jQuery: '//code.jquery.com/jquery-2.2.4.min',
-        angular: '//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular',
-		angularRoute: '//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min'
+		jQuery: "//code.jquery.com/jquery-2.2.4.min",
+        angular: "//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular",
+		angularRoute: "//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min"
 	},
 	shim: {
-		'jQuery':{
-			'exports': 'jQuery'
+		"jQuery":{
+			"exports": "jQuery"
 		},
-		'angular': {
-			'exports': 'angular'
+		"angular": {
+			"exports": "angular"
 		},
-		'angularRoute': ['angular'],
+		"angularRoute": ["angular"],
 	},
-	deps: ['app/app']
+	deps: ["app/app"]
 });

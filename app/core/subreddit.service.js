@@ -6,7 +6,7 @@
     .factory("subredditService", ["$http", subredditService]);
 
    function subredditService($http) {
-    var _mapSubData = function(child) {
+    function _mapSubData(child) {
       return {
         author:child.data.author,
         created:child.data.created,

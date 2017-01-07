@@ -1,3 +1,7 @@
+
+
+[![travis](https://travis-ci.org/icewassim/scrappeddit.svg?branch=master)](https://travis-ci.org/icewassim/scrappeddit)
+
 # scrappeddit
 Reddit scribbled on board
 

@@ -13,16 +13,9 @@
         edited:child.data.edited,
         score:child.data.score,
         ups:child.data.ups,
-        replies: child.data.replies.data && child.data.replies.data.children,
-        // replies:child.data.replies,
+        replies:  child.data.replies && child.data.replies.data && child.data.replies.data.children,
         body:child.data.body
       }
-    }
-
-    function _sortSubData(firstItem, secondItem) {
-      //TODO Sort By attribute
-      //return secondItem.body.length - firstItem.body.length;
-      return - secondItem.score + firstItem.score;
     }
 
     function formatSubredditUrl(subredditId, threadId) {
@@ -46,7 +39,6 @@
           return result.data[1].data.children
             .filter(filterEmptyData)
             .map(_mapSubData)
-            //.sort(_sortSubData);
         }catch(e){
           console.error(e);
         }

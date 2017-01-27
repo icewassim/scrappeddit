@@ -230,13 +230,13 @@ body{
 	right: 5px;
     position: absolute;
     color: #65a0d3;
-    bottom: 6px;
+	bottom: 28px;
     font-size: 12px;
 }
 
 .notif-date {
+	bottom: 6px;
 	position: absolute;
-    bottom: 28px;
     right: 5px;
     font-size: 11px;
     color: grey;
@@ -295,4 +295,6 @@ body{
     left: -1px;
     font-size: 15px;
     padding-top: 5px;
+	padding-left: 15px;
+    padding-right: 15px;
 }

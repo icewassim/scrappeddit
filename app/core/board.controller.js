@@ -18,6 +18,7 @@
             subredditService.getPosts($routeParams.subreddit, $routeParams.threadId)
                 .then(function(data) {
                     boardCtrl.comments = commentsService.randomizeComments(data);
+                    debugger
                 });
             }
 

@@ -16,7 +16,6 @@
                     return commentsService.getHoveredComment();
                 }, function (newVal) {
                     var coordinates;
-
                     if(!newVal) {
                         return false;
                     }

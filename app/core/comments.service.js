@@ -15,6 +15,8 @@
             "MAX": 1000,
             "MIN": 0
         },
+        AVATARS_LENGTH: 23,
+        FAV_COLORS: [[231, 110, 68], [140, 234, 201], [37, 162, 60], [215, 141, 8], [153, 235, 40], [228, 233, 85], [39, 54, 231], [223, 133, 221], [212, 123, 94], [245, 239, 212], [229, 168, 48], [245, 21, 122], [208, 98, 32], [238, 235, 226]]
     })
     .service("commentsService", ["COMMENT_CONFIG", commentsService]);
 
@@ -44,20 +46,22 @@
       }
 
       function randomizeComments(data) {
-        var sortedByScore = data.sort(_sortByScore),
-            globalScore = {
-                maxScore: COMMENT_CONFIG.MAX || sortedByScore[data.length -1 ].score,
-                minScore: COMMENT_CONFIG.MIN || sortedByScore[0].score
+        var globalScore = {
+                minScore: COMMENT_CONFIG.MAX || data[data.length -1 ].score,
+                maxScore: COMMENT_CONFIG.MIN || data[0].score
             }
 
         return data.map(function(comment) {
             return angular.extend(comment, {
-                color: _genRandomColor(),
+                 color: _genRandomColor(),
                  position: _genRandomPosition(),
                  font: _genRandomFont(),
                  rotation: _genRandomRotation(),
                  width: _getRandomWidth(),
-                 fontSize: _getFontSize(comment.score, this.maxScore, this.minScore) + COMMENT_CONFIG.MIN_FONT_SIZE
+                 date: _timeDifference(new Date(), new Date(comment.created * 1000)),
+                 replies: comment.replies,
+                 avatar: _genRandomAvatar(),
+                 fontSize: _getFontSize(comment.score, this.maxScore, this.minScore, comment.body.length) + COMMENT_CONFIG.MIN_FONT_SIZE
              })
          }.bind(globalScore));
      }
@@ -112,6 +116,11 @@
           return a.score - b.score;
       }
 
+
+      function _genRandomAvatar(){
+          return _rand(COMMENT_CONFIG.AVATARS_LENGTH, 1);
+      }
+
       function _genRandomFont() {
           var randIndex,
           fontsArray = ["ArchitectsDaughter", "billy","REIS-Regular", "danielbk", "DiamondsPearls", "FAIL____", "GoodDog", "HappyFox-Condensed", "JennaSue", "Ludicrous", "LSTKGarPenTin", "OwnThatShhhh", "pops_08_BOLD", "Sketch_Block", "whatever_it_takes", "stay_writer"];
@@ -121,10 +130,11 @@
       }
 
       function _genRandomColor() {
+          var idx = _rand(COMMENT_CONFIG.FAV_COLORS.length);
           return {
-              r: _rand(255),
-              g: _rand(255),
-              b: _rand(255)
+              r: COMMENT_CONFIG.FAV_COLORS[idx][0],
+              g: COMMENT_CONFIG.FAV_COLORS[idx][1],
+              b: COMMENT_CONFIG.FAV_COLORS[idx][2]
           };
       }
 
@@ -143,13 +153,48 @@
           return _rand(10, -5);
       }
 
-      function _getFontSize(commentScore, maxScore, minScore) {
-          return (commentScore - minScore) / (maxScore - minScore) * 50;
+      function _getFontSize(commentScore, maxScore, minScore, bodyLength) {
+          return (commentScore - minScore) / (maxScore - minScore) * 50 * (1/bodyLength);
       }
 
       function _rand(max, min) {
           return parseInt(Math.random()*max + (min || 0));
       }
+
+
+      function _timeDifference(current, previous) {
+        var msPerMinute = 60 * 1000;
+        var msPerHour = msPerMinute * 60;
+        var msPerDay = msPerHour * 24;
+        var msPerMonth = msPerDay * 30;
+        var msPerYear = msPerDay * 365;
+
+        var elapsed = current - previous;
+
+        if (elapsed < msPerMinute) {
+             return Math.round(elapsed/1000) + ' seconds ago';
+        }
+
+        else if (elapsed < msPerHour) {
+             return Math.round(elapsed/msPerMinute) + ' minutes ago';
+        }
+
+        else if (elapsed < msPerDay ) {
+             return Math.round(elapsed/msPerHour ) + ' hours ago';
+        }
+
+        else if (elapsed < msPerMonth) {
+            return  Math.round(elapsed/msPerDay) + ' days ago';
+        }
+
+        else if (elapsed < msPerYear) {
+            return  Math.round(elapsed/msPerMonth) + ' months ago';
+        }
+
+        else {
+            return  Math.round(elapsed/msPerYear ) + ' years ago';
+        }
+    }
 
       return {
           getPopupCoordinates: getPopupCoordinates,

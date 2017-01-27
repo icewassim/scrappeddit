@@ -298,3 +298,51 @@ body{
 	padding-left: 15px;
     padding-right: 15px;
 }
+
+.grid-item{
+	cursor: pointer;
+}
+
+.arrow-up {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 15px solid white;
+	top: -15px;
+	left: 121px;
+}
+
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 15px solid white;
+	position: absolute;
+	bottom: -15px;
+	left: 130px;
+}
+
+.arrow-right {
+	width: 0;
+	height: 0;
+	right: -15px;
+	top: 42px;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-left: 15px solid white;
+	position: absolute;
+}
+
+.arrow-left {
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-bottom: 15px solid transparent;
+	border-right: 15px solid white;
+	top: 35px;
+	left: -15px;
+}

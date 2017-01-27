@@ -18,10 +18,11 @@
         AVATARS_LENGTH: 23,
         FAV_COLORS: [[231, 110, 68], [140, 234, 201], [37, 162, 60], [215, 141, 8], [153, 235, 40], [228, 233, 85], [39, 54, 231], [223, 133, 221], [212, 123, 94], [245, 239, 212], [229, 168, 48], [245, 21, 122], [208, 98, 32], [238, 235, 226]]
     })
-    .service("commentsService", ["COMMENT_CONFIG", commentsService]);
+    .service("commentsService", ["COMMENT_CONFIG", "$timeout", commentsService]);
 
-  function commentsService(COMMENT_CONFIG) {
+  function commentsService(COMMENT_CONFIG, $timeout) {
       this.hoveredComment =  {};
+      this.hoverTimeout;
 
       function setHoveredComment(comment, element) {
           this.hoveredComment = comment;
@@ -39,6 +40,16 @@
               width: element.width() ,
               height: element.height(),
           };
+
+          this.hoveredComment.element = element;
+      }
+
+      function setHoverTimeout(_hoverTimeout_) {
+          this.hoverTimeout = _hoverTimeout_;
+      }
+
+      function clearHoverTimeout() {
+          $timeout.cancel(this.hoverTimeout);
       }
 
       function getHoveredComment() {
@@ -101,8 +112,8 @@
               placement = COMMENT_CONFIG.PLACEMENT.LEFT;
               position = {
                   top: commentOffset.top - 50,
-                  left: commentOffset.left - commentSize.width - 220
-              }
+                  left: commentOffset.left - commentSize.width/2 - 220
+              };
           }
 
           return {
@@ -200,6 +211,8 @@
           getPopupCoordinates: getPopupCoordinates,
           randomizeComments: randomizeComments,
           setHoveredComment: setHoveredComment,
+          setHoverTimeout: setHoverTimeout,
+          clearHoverTimeout: clearHoverTimeout,
           getHoveredComment: getHoveredComment,
       };
   }

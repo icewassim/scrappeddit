@@ -1,4 +1,4 @@
-<div ng-mouseover="onHover(comment)" class="grid-item" style="color:rgb({{comment.color.r}},{{comment.color.g}},{{comment.color.b}});font-size:{{comment.fontSize}}px;font-family:'{{comment.font}}';width:{{comment.width}}px;transform: rotate({{comment.rotation}}deg);">
+<div ng-mouseenter="onEnter(comment)" class="grid-item" style="color:rgb({{comment.color.r}},{{comment.color.g}},{{comment.color.b}});font-size:{{comment.fontSize}}px;font-family:'{{comment.font}}';width:{{comment.width}}px;transform: rotate({{comment.rotation}}deg);">
   {{comment.body | limitTo:70 }}
   <span ng-if="comment.body.length > 70">...</span>
 </div>

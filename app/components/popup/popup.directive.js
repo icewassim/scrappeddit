@@ -12,6 +12,10 @@
             scope: {},
             templateUrl: "app/components/popup/popup.html",
             controller: ["$scope", "commentsService", function($scope, commentsService) {
+                $scope.onMouseEnter = function() {
+                    commentsService.clearHoverTimeout();
+                };
+
                 $scope.$watch(function() {
                     return commentsService.getHoveredComment();
                 }, function (newVal) {

@@ -1,8 +1,12 @@
-<div id="popoverComment" ng-show="content" class="popover" style="top: {{coordinates.position.top}}px; left: {{coordinates.position.left}}px; display: initial;position:absolute">
-  <div class="arrow arrow-top"></div>
+<div id="popoverComment" ng-show="content" class="popover" style="top: {{coordinates.position.top}}px; left: {{coordinates.position.left}}px; display: initial;position:absolute" ng-mouseenter="onMouseEnter()">
+  <div ng-show="coordinates.placement === 'bottom'" class="arrow-up"></div>
+  <div ng-show="coordinates.placement === 'top'" class="arrow-down"></div>
+  <div ng-show="coordinates.placement === 'right'" class="arrow-left"></div>
+  <div ng-show="coordinates.placement === 'left'" class="arrow-right"></div>
+
   <h3 class="popover-title">
     <a class="comment-owner">
-        {{content.author}}{{placement}}
+        {{content.author}} ,, {{coordinates.placement}}
         <img class="comment-thumbnail" ng-src="pics/avatars/{{content.avatar}}.jpg" style="border-radius:50%" >
     </a>
     <br>

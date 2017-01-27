@@ -10,8 +10,8 @@ Reddit scribbled on board
 https://icewassim.github.io/scrappeddit/
 
 #How To
- - copy the Subreddit thread url that after the "/r/" included "/r/AskReddit/comments/5aih71/which_movie_would_be_boring_if_its_plot_is/"
- - concat it to the repo url like this  https://icewassim.github.io/scrappeddit/#/r/AskReddit/comments/5aih71/which_movie_would_be_boring_if_its_plot_is/
+ - copy the Subreddit thread url that after the "/r/" included for example: "/r/AskReddit/comments/5aih71/which_movie_would_be_boring_if_its_plot_is/"
+ - add "#" and concat it to the repo url like this: https://icewassim.github.io/scrappeddit/#/r/AskReddit/comments/5aih71/which_movie_would_be_boring_if_its_plot_is/
  - Et Voila!
 
 #Tests

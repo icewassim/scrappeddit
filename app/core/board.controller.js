@@ -25,9 +25,9 @@
 
         // TODO: rplace with dom is ready
         setTimeout(function(){
-            requirejs([
-              "app/libs/isotope.pkgd",
-            ], function( Isotope ) {
+            // requirejs([
+            //   "app/libs/isotope.pkgd",
+            // ], function( Isotope ) {
                 var iso  = new Isotope(".grid",{
                       itemSelector: ".grid-item",
                       percentPosition: true,
@@ -35,8 +35,8 @@
                           columnWidth: BOARD_CONFIG.MASONRY.COLUMN_SIZE
                       }
                   });
-                iso();
-            });
+            //    iso();
+            // });
 
         }, 6000);
       }

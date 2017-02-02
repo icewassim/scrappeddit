@@ -6,7 +6,7 @@
 
   <h3 class="popover-title">
     <a class="comment-owner">
-        {{content.author}} ,, {{coordinates.placement}}
+        {{content.author}}
         <img class="comment-thumbnail" ng-src="pics/avatars/{{content.avatar}}.jpg" style="border-radius:50%" >
     </a>
     <br>
@@ -26,11 +26,15 @@
   </h3>
   <div class="popover-content">
     <span class="popover-score">
+        <img src="pics/downvote.png" class="upvote"/>
         {{content.score}}
+        <img src="pics/downvote.png"/>
     </span>
     <span class="notif-date">{{content.date}}</span></span>
-    <a class="read-comments" ng-show="content.replies.length > 0">
-        <span>{{content.replies.length}} comment<span ng-show="content.replies.length > 1">s</span></span>
+    <a ng-click="triggerRepliesModal(content)" class="read-comments submenu-item md-trigger" data-modal="CommentDetailMoadl" ng-show="content.replies.length > 0">
+    <span >{{content.replies.length}} comment<span ng-show="content.replies.length > 1">s</span>
+        <img class='comment-icon' src="pics/small-comment-black.png" />
+    </span>
     </a>
   </div>
 </div>

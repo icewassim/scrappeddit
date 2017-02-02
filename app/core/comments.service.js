@@ -16,12 +16,13 @@
             "MIN": 0
         },
         AVATARS_LENGTH: 23,
-        FAV_COLORS: [[231, 110, 68], [140, 234, 201], [37, 162, 60], [215, 141, 8], [153, 235, 40], [228, 233, 85], [39, 54, 231], [223, 133, 221], [212, 123, 94], [245, 239, 212], [229, 168, 48], [245, 21, 122], [208, 98, 32], [238, 235, 226]]
+        FAV_COLORS: [[0, 153, 255], [231, 110, 68], [140, 234, 201], [37, 162, 60], [215, 141, 8], [153, 235, 40], [228, 233, 85], [39, 54, 231], [223, 133, 221], [212, 123, 94], [245, 239, 212], [229, 168, 48], [245, 21, 122], [208, 98, 32], [238, 235, 226]]
     })
     .service("commentsService", ["COMMENT_CONFIG", "$timeout", commentsService]);
 
   function commentsService(COMMENT_CONFIG, $timeout) {
       this.hoveredComment =  {};
+      this.modalComment = {};
       this.hoverTimeout;
 
       function setHoveredComment(comment, element) {
@@ -71,7 +72,7 @@
                  width: _getRandomWidth(),
                  date: _timeDifference(new Date(), new Date(comment.created * 1000)),
                  replies: comment.replies,
-                 avatar: _genRandomAvatar(),
+                 avatar: genRandomAvatar(),
                  fontSize: _getFontSize(comment.score, this.maxScore, this.minScore, comment.body.length) + COMMENT_CONFIG.MIN_FONT_SIZE
              })
          }.bind(globalScore));
@@ -128,7 +129,7 @@
       }
 
 
-      function _genRandomAvatar(){
+      function genRandomAvatar(){
           return _rand(COMMENT_CONFIG.AVATARS_LENGTH, 1);
       }
 
@@ -183,28 +184,36 @@
         var elapsed = current - previous;
 
         if (elapsed < msPerMinute) {
-             return Math.round(elapsed/1000) + ' seconds ago';
+             return Math.round(elapsed/1000) + " seconds ago";
         }
 
         else if (elapsed < msPerHour) {
-             return Math.round(elapsed/msPerMinute) + ' minutes ago';
+             return Math.round(elapsed/msPerMinute) + " minutes ago";
         }
 
         else if (elapsed < msPerDay ) {
-             return Math.round(elapsed/msPerHour ) + ' hours ago';
+             return Math.round(elapsed/msPerHour ) + " hours ago";
         }
 
         else if (elapsed < msPerMonth) {
-            return  Math.round(elapsed/msPerDay) + ' days ago';
+            return  Math.round(elapsed/msPerDay) + " days ago";
         }
 
         else if (elapsed < msPerYear) {
-            return  Math.round(elapsed/msPerMonth) + ' months ago';
+            return  Math.round(elapsed/msPerMonth) + " months ago";
         }
 
         else {
-            return  Math.round(elapsed/msPerYear ) + ' years ago';
+            return  Math.round(elapsed/msPerYear ) + " years ago";
         }
+    }
+
+    function setModalComment(comment, replie) {
+        this.modalComment= comment;
+    }
+
+    function getModalComment() {
+        return this.modalComment;
     }
 
       return {
@@ -214,6 +223,9 @@
           setHoverTimeout: setHoverTimeout,
           clearHoverTimeout: clearHoverTimeout,
           getHoveredComment: getHoveredComment,
+          setModalComment: setModalComment,
+          getModalComment: getModalComment,
+          genRandomAvatar: genRandomAvatar
       };
   }
 }());

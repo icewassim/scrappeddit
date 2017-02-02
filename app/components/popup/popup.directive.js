@@ -12,6 +12,10 @@
             scope: {},
             templateUrl: "app/components/popup/popup.html",
             controller: ["$scope", "commentsService", function($scope, commentsService) {
+                $scope.triggerRepliesModal= function(comment) {
+                    commentsService.setModalComment(comment, []);
+                };
+
                 $scope.onMouseEnter = function() {
                     commentsService.clearHoverTimeout();
                 };

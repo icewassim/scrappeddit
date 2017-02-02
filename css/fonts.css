@@ -167,6 +167,7 @@
 body{
 	/*background-image: url("http://scribbler.elwiss.me/pictures/background/paper1.jpg");*/
 	background-image: url('../pics/board.jpg');
+	font-family: 'Open Sans', sans-serif;
 }
 
 .popover-title {
@@ -204,7 +205,7 @@ body{
 	position: absolute;
     top: 0;
     left: 50px;
-    z-index: 1010;
+    z-index: 2;
     display: none;
 	border-radius: 0px;
     padding: 1px;
@@ -213,7 +214,6 @@ body{
     background-clip: padding-box;
     border: 1px solid #ccc;
     border: 1px solid rgba(0,0,0,.2);
-	font-family: sans-serif;
     -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
     white-space: normal;
@@ -222,24 +222,31 @@ body{
 }
 
 #hoveredDescription {
-	color: black;
+	color: #373737;
 	font-weight: normal;
 }
 
 .popover .read-comments {
+	cursor: pointer;
 	right: 5px;
     position: absolute;
     color: #65a0d3;
-	bottom: 28px;
     font-size: 12px;
+	bottom: 6px;
+	font-family: sans-serif;
+}
+.comment-icon{
+	opacity: 0.6;
+    margin-bottom: -4px;
+    margin-left: 3px;
 }
 
 .notif-date {
-	bottom: 6px;
+	bottom: 31px;
 	position: absolute;
-    right: 5px;
-    font-size: 11px;
-    color: grey;
+	right: 5px;
+	font-size: 10px;
+	color: #aeaeae;
 }
 
 .popover.bottom>.arrow {
@@ -294,9 +301,14 @@ body{
     position: absolute;
     left: -1px;
     font-size: 15px;
-    padding-top: 5px;
-	padding-left: 15px;
-    padding-right: 15px;
+    padding-top: 3px;
+    padding-left: 4px;
+    padding-right: 5px;
+	font-family: sans-serif;
+}
+
+.popover-score .upvote{
+	transform: rotate(180deg);
 }
 
 .grid-item{
@@ -345,4 +357,104 @@ body{
 	border-right: 15px solid white;
 	top: 35px;
 	left: -15px;
+}
+
+
+.md-modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	max-width: 630px;
+	min-width: 320px;
+	height: auto;
+	z-index: 2000;
+	visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.md-show {
+	visibility: visible;
+}
+
+.md-overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	opacity: 0;
+	background: rgba(143,27,15,0.8);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+	opacity: 1;
+	visibility: visible;
+}
+
+.md-effect-2 .md-content {
+	-webkit-transform: translateX(20%);
+	-moz-transform: translateX(20%);
+	-ms-transform: translateX(20%);
+	transform: translateX(20%);
+	opacity: 0;
+	-webkit-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	-moz-transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+	transition: all 0.3s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+.modal-body{
+  background-color: #F7F7F7;
+  margin-bottom: -15px;
+}
+
+.modal-dialog {
+	width:600px;
+	margin: 30px auto
+}
+
+.modal-content {
+	-webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+	box-shadow: 0 5px 15px rgba(0,0,0,.5)
+}
+
+.modal-sm {
+	width: 300px
+}
+
+#CommentDetailMoadl{
+	width: 100%;
+    min-height: 280px;
+    margin-bottom: 60px;
+    background-color: #F7F7F7;
+	padding-bottom: 15px;
+    border-radius: 20px;
+    height: auto;
+    max-width: 65%;
+}
+.modal-comment-container{
+	padding-left: 62px;
+    margin-right: 20px;
+    padding-top: 5px;
+	min-height: 50px;
+    padding-bottom: 10px;
+    margin-top: 15px;
+    position: relative;
+	font-size: 13px;
+    margin-left: 23px;
+    background-color: white;
+    height: auto;
+    text-align: left;
+    box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2), 0 0 2px 1px rgba(255, 255, 255, 0.5);
 }

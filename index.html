@@ -4,10 +4,28 @@
     <!-- <base href="/scrappeddit/"> -->
     <meta charset="utf-8">
     <title>ScrapReddit</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/scrappeddit/css/fonts.css">
   </head>
-  <body>
+  <body ng-app="app">
     <ng-view></ng-view>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js" data-main="/scrappeddit/main.js"></script>
+    <button class="submenu-item md-trigger"  style="display:none;" id="fake-trigger" data-modal="CommentDetailMoadl"></button>
+    </div><!-- /.modal -->
+    <modal-element></modal-element>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js" data-main="/scrappeddit/main.js.js"></script> -->
+    <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="app/libs/isotope.pkgd.js"></script>
+    <script src="app/libs/modal.effect.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>
+    <script src="app/app.native.js"></script>
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/subreddit.service.js"></script>
+    <script src="app/core/comments.service.js"></script>
+    <script src="app/core/board.controller.js"></script>
+    <script src="app/components/components.module.js"></script>
+    <script src="app/components/comment/comment.directive.js"></script>
+    <script src="app/components/modal/modal.directive.js"></script>
+    <script src="app/components/popup/popup.directive.js"></script>
   </body>
 </html>

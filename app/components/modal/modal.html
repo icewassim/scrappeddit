@@ -1,0 +1,26 @@
+<div id="CommentDetailMoadl"  class="md-modal md-effect-2" style="position:fixed;z-index:222222">
+    <div class="modal-comment-container">
+        <div class="comment-owner">
+                {{modalComment.author}}
+        </div>
+        <img class="comment-thumbnail" ng-src="pics/avatars/{{modalComment.avatar}}.jpg" style="border-radius: 50%;position: absolute;left: 3px;top: 4px;" >
+        <div class="modal-comment-body">
+                {{modalComment.body}}
+        </div>
+    </div>
+
+    <div ng-repeat="reply in replies">
+        <div class="modal-comment-container">
+            <div class="comment-owner">
+                    {{reply.author}}
+            </div>
+            <img class="comment-thumbnail" ng-src="pics/avatars/{{reply.avatar}}.jpg" style="border-radius: 50%;position: absolute;left: 3px;top: 4px;" >
+            <div class="modal-comment-body">
+                    {{reply.body}}
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="md-overlay" style="background: rgba(167, 186, 207, 0.59)"></div>

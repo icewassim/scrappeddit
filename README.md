@@ -9,10 +9,16 @@ Reddit scribbled on board
 #Demo
 https://icewassim.github.io/scrappeddit/
 
-#How To
+#Usage
  - copy the Subreddit thread url that after the "/r/" included for example: "/r/AskReddit/comments/5aih71/which_movie_would_be_boring_if_its_plot_is/"
  - add "#" and concat it to the repo url like this: https://icewassim.github.io/scrappeddit/#/r/AskReddit/comments/5aih71/which_movie_would_be_boring_if_its_plot_is/
  - Et Voila!
 
-#Tests
+#Unit Tests
  - npm test
+
+#Credits
+ - [![Isotope PACKAGED](http://isotope.metafizzy.co)
+ - [![Redit API](https://www.reddit.com/dev/api/)
+ - [![codrops](http://www.codrops.com)
+ 

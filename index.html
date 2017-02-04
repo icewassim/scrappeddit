@@ -9,11 +9,25 @@
   </head>
   <body ng-app="app">
     <ng-view></ng-view>
+    <span id="loading">
+        <div id="splash-screen"></div>
+        <img src="pics/loading_hamster.gif" style="position: absolute;top: 36%;left: 42%;opacity:0.2;"/>
+    </span>
+    <div id="github-star">
+        <a id="sub-href" class="button reddit-btn" target="_blank">
+            <img class="reddit-icon" src="pics/reddit-icon.png"/>
+            <span id="subreddit-content">
+            </span>
+        </a>
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/icewassim/scrappeddit" data-style="mega" aria-label="Star icewassim/scrappeddit on GitHub">Star</a>
+    </div>
     <button class="submenu-item md-trigger"  style="display:none;" id="fake-trigger" data-modal="CommentDetailMoadl"></button>
     </div><!-- /.modal -->
     <modal-element></modal-element>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js" data-main="/scrappeddit/main.js.js"></script> -->
     <script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
     <script src="app/libs/isotope.pkgd.js"></script>
     <script src="app/libs/modal.effect.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
@@ -27,5 +41,6 @@
     <script src="app/components/comment/comment.directive.js"></script>
     <script src="app/components/modal/modal.directive.js"></script>
     <script src="app/components/popup/popup.directive.js"></script>
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
   </body>
 </html>

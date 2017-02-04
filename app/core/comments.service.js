@@ -70,7 +70,7 @@
                  font: _genRandomFont(),
                  rotation: _genRandomRotation(),
                  width: _getRandomWidth(),
-                 date: _timeDifference(new Date(), new Date(comment.created * 1000)),
+                 date: timeDifference(new Date(), new Date(comment.created * 1000)),
                  replies: comment.replies,
                  avatar: genRandomAvatar(),
                  fontSize: _getFontSize(comment.score, this.maxScore, this.minScore, comment.body.length) + COMMENT_CONFIG.MIN_FONT_SIZE
@@ -174,7 +174,7 @@
       }
 
 
-      function _timeDifference(current, previous) {
+      function timeDifference(current, previous) {
         var msPerMinute = 60 * 1000;
         var msPerHour = msPerMinute * 60;
         var msPerDay = msPerHour * 24;
@@ -224,6 +224,7 @@
           clearHoverTimeout: clearHoverTimeout,
           getHoveredComment: getHoveredComment,
           setModalComment: setModalComment,
+          timeDifference: timeDifference,
           getModalComment: getModalComment,
           genRandomAvatar: genRandomAvatar
       };

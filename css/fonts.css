@@ -445,7 +445,7 @@ body{
 }
 .modal-comment-container{
 	padding-left: 62px;
-    margin-right: 20px;
+    margin-right: 30px;
     padding-top: 5px;
 	min-height: 50px;
     padding-bottom: 10px;
@@ -457,4 +457,56 @@ body{
     height: auto;
     text-align: left;
     box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2), 0 0 2px 1px rgba(255, 255, 255, 0.5);
+}
+
+#splash-screen {
+	position: absolute;
+	left: 12%;
+	font-size: 87px;
+	top: 20%;
+	font-family: FAIL____;
+	color: #f2ecec;
+	opacity: 0.8;
+ }
+
+#github-star{
+	position: fixed;
+	right: 10px;
+	bottom: 5px;
+	background-color: rgba(255, 255, 255, 0.55);
+	padding: 10px;
+	padding-bottom: 4px;
+	height: auto;
+	border-radius: 4px;
+	display: none;
+}
+
+.reddit-btn {
+	cursor: pointer;
+	float: left;
+    font-size: 13px;
+    padding: 3px;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    margin-right: 4px;
+	color: black;
+	text-decoration: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    background-color: #eee;
+	font-weight: 600;
+    background-image: -webkit-linear-gradient(top,#fcfcfc,#eee);
+    background-image: -moz-linear-gradient(top,#fcfcfc,#eee);
+    background-image: linear-gradient(to bottom,#fcfcfc,#eee);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#eeeeee')";
+    border-radius: 3px;
+}
+
+.subreddit-content  {
+
+}
+
+.reddit-icon{
+    height: 25px;
+    margin-top: 1px;
+    margin-bottom: -6px;
 }

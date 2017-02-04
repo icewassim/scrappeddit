@@ -14,7 +14,6 @@ function commentDirectivr() {
             $scope.$watch(function(){
                 return commentsService.getModalComment();
             }, function(newVal){
-                console.log(newVal);
                 if(newVal) {
                     $("#fake-trigger").click()
                     $scope.modalComment = newVal;
@@ -23,7 +22,7 @@ function commentDirectivr() {
                             return {
                                 body: reply.data.body,
                                 author: reply.data.author,
-                                created: reply.data.created,
+                                date:  commentsService.timeDifference(new Date(), new Date(reply.data.created_utc * 1000)) ,
                                 avatar: commentsService.genRandomAvatar()
                             }
                         })

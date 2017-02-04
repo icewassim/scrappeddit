@@ -7,6 +7,7 @@
         <div class="modal-comment-body">
                 {{modalComment.body}}
         </div>
+        <span class="notif-date" style="bottom: 3px;">{{modalComment.date}}</span></span>
     </div>
 
     <div ng-repeat="reply in replies">
@@ -18,6 +19,7 @@
             <div class="modal-comment-body">
                     {{reply.body}}
             </div>
+            <span class="notif-date" style="bottom: 3px;">{{reply.date}}</span></span>
         </div>
     </div>
 

@@ -14,15 +14,17 @@
         var boardCtrl = this;
 
         boardCtrl.comments = [];
+        boardCtrl.splashScreen = $routeParams.subreddit;
         function init() {
             subredditService.getPosts($routeParams.subreddit, $routeParams.threadId)
                 .then(function(data) {
                     boardCtrl.comments = commentsService.randomizeComments(data);
+                    document.getElementById("loading").style.display = "none";
+                    document.getElementById("github-star").style.display = "block";
                 });
             }
 
         init();
-
         // TODO: rplace with dom is ready
         setTimeout(function(){
             // requirejs([

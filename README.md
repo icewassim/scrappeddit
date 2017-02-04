@@ -9,11 +9,11 @@ Reddit scribbled on board
 #Demo
 https://icewassim.github.io/scrappeddit/
 
-#Usage
- ![alt tag](https://icewassim.github.io/scrappeddit/usage.gif)
-
 #Unit Tests
  - npm test
+ 
+#Usage
+ ![alt tag](https://icewassim.github.io/scrappeddit/usage.gif)
 
 #Credits
  - [Redit API](https://www.reddit.com/dev/api/)

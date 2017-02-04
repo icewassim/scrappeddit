@@ -18,7 +18,7 @@ https://icewassim.github.io/scrappeddit/
  - npm test
 
 #Credits
- - [![Isotope PACKAGED](http://isotope.metafizzy.co)
- - [![Redit API](https://www.reddit.com/dev/api/)
- - [![codrops](http://www.codrops.com)
+ - [Isotope PACKAGED](http://isotope.metafizzy.co)
+ - [Redit API](https://www.reddit.com/dev/api/)
+ - [codrops](http://www.codrops.com)
  

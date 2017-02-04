@@ -459,6 +459,12 @@ body{
     box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2), 0 0 2px 1px rgba(255, 255, 255, 0.5);
 }
 
+.read-more {
+	color:#65a0d3;
+	margin-left:5px;
+	cursor:pointer;
+}
+
 #splash-screen {
 	text-align: center;
 	position: absolute;

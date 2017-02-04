@@ -16,6 +16,6 @@ https://icewassim.github.io/scrappeddit/
  ![alt tag](https://icewassim.github.io/scrappeddit/usage.gif)
 
 #Credits
- - [Redit API](https://www.reddit.com/dev/api/)
+ - [Reddit API](https://www.reddit.com/dev/api/)
  - [Isotope PACKAGED](http://isotope.metafizzy.co)
  - [codrops](http://www.codrops.com)

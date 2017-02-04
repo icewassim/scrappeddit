@@ -10,7 +10,7 @@ angular
                 when("/r/:subreddit/comments/:threadId/:title/", {
                     templateUrl: "/scrappeddit/app/core/core-view.html"
                 })
-                .otherwise("/r/AskReddit/comments/5aih71/which_movie_would_be_boring_if_its_plot_is/");
+                .otherwise("/r/AskReddit/comments/5s01t3/serious_what_keeps_you_from_falling_into_the/");
 /*
             $locationProvider.html5Mode({
                 enabled: true

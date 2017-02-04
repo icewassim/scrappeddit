@@ -36,8 +36,11 @@
               return [];
           }
 
-          document.getElementById("subreddit-content").innerHTML = result.data[0].data.children[0].data.title;
-          document.getElementById("sub-href").setAttribute("href", "https://reddit.com/r/"+ subredditId + "/comments/"+ threadId);
+          if(result.data[0].data) {
+              document.getElementById("subreddit-content").innerHTML = result.data[0].data.children[0].data.title;
+              document.getElementById("sub-href").setAttribute("href", "https://reddit.com/r/"+ subredditId + "/comments/"+ threadId);
+          }
+
           return result.data[1].data.children
             .filter(filterEmptyData)
             .map(_mapSubData);

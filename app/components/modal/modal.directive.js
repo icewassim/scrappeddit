@@ -15,7 +15,7 @@ function commentDirectivr() {
                 return commentsService.getModalComment();
             }, function(newVal){
                 if(newVal) {
-                    $("#fake-trigger").click()
+                    $("#fake-trigger").click();
                     $scope.modalComment = newVal;
                     $scope.replies = newVal.replies
                         .map(function(reply){
@@ -32,7 +32,7 @@ function commentDirectivr() {
                 }
             });
         }],
-        link: function(scope, element, attr) {
+        compile: function() {
             initModal();
         }
     }

@@ -123,12 +123,6 @@
           }
       }
 
-      //TODO cmon ?!
-      function _sortByScore(a,b) {
-          return a.score - b.score;
-      }
-
-
       function genRandomAvatar(){
           return _rand(COMMENT_CONFIG.AVATARS_LENGTH, 1);
       }
@@ -208,7 +202,7 @@
         }
     }
 
-    function setModalComment(comment, replie) {
+    function setModalComment(comment) {
         this.modalComment= comment;
     }
 

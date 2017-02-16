@@ -15,6 +15,9 @@
 
         boardCtrl.comments = [];
         boardCtrl.splashScreen = $routeParams.subreddit;
+        boardCtrl.updateHoveredComment = function(comment) {
+            boardCtrl.hoveredComment = comment;
+        }
         function init() {
             subredditService.getPosts($routeParams.subreddit, $routeParams.threadId)
                 .then(function(data) {

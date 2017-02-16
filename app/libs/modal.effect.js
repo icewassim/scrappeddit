@@ -16,7 +16,9 @@
  // class helper functions from bonzo https://github.com/ded/bonzo
 
  var hashSplit = window.location.hash.split("/");
- document.getElementById("splash-screen").innerHTML = "\/r\/"+hashSplit[2] +"<br>"+ hashSplit[hashSplit.length -2].split("_").join(" ");
+ if(hashSplit.length > 1) {
+    document.getElementById("splash-screen").innerHTML = "\/r\/"+hashSplit[2] +"<br>"+ hashSplit[hashSplit.length -2].split("_").join(" ");
+}
 
  function classReg( className ) {
    return new RegExp("(^|\\s+)" + className + "(\\s+|$)");

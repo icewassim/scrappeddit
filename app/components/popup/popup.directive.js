@@ -9,7 +9,9 @@
         return {
             restrict: "E",
             replace: true,
-            scope: {},
+            scope: {
+                hoveredComment: '='
+            },
             templateUrl: "app/components/popup/popup.html",
             controller: ["$scope", "commentsService", function($scope, commentsService) {
                 $scope.triggerRepliesModal= function(comment) {
@@ -20,9 +22,7 @@
                     commentsService.clearHoverTimeout();
                 };
 
-                $scope.$watch(function() {
-                    return commentsService.getHoveredComment();
-                }, function (newVal) {
+                $scope.$watch("hoveredComment", function (newVal) {
                     var coordinates;
                     if(!newVal) {
                         return false;

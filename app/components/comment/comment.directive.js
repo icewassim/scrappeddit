@@ -10,7 +10,8 @@
         restrict: "E",
         replace: true,
         scope:{
-            comment: "="
+            comment: "=",
+            mouseenterComment: "&",
         },
         templateUrl: "app/components/comment/comment.html",
         link: function(scope, element) {
@@ -18,7 +19,7 @@
                 var hoverTimeout;
                 commentsService.clearHoverTimeout();
                 hoverTimeout = $timeout(function(){
-                    commentsService.setHoveredComment(this.comment, this.element);
+                    scope.mouseenterComment({comment:commentsService.extendHoveredComment(this.comment, this.element)})
                 }.bind({
                     comment:comment,
                     element: this

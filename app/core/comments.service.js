@@ -25,7 +25,7 @@
       this.modalComment = {};
       this.hoverTimeout;
 
-      function setHoveredComment(comment, element) {
+      function extendHoveredComment(comment, element) {
           this.hoveredComment = comment;
           this.hoveredComment.position = {
               top:  (element.position().top / window.innerHeight) * 100,
@@ -43,6 +43,8 @@
           };
 
           this.hoveredComment.element = element;
+
+          return this.hoveredComment;
       }
 
       function setHoverTimeout(_hoverTimeout_) {
@@ -51,10 +53,6 @@
 
       function clearHoverTimeout() {
           $timeout.cancel(this.hoverTimeout);
-      }
-
-      function getHoveredComment() {
-          return this.hoveredComment;
       }
 
       function randomizeComments(data) {
@@ -213,10 +211,9 @@
       return {
           getPopupCoordinates: getPopupCoordinates,
           randomizeComments: randomizeComments,
-          setHoveredComment: setHoveredComment,
+          extendHoveredComment: extendHoveredComment,
           setHoverTimeout: setHoverTimeout,
           clearHoverTimeout: clearHoverTimeout,
-          getHoveredComment: getHoveredComment,
           setModalComment: setModalComment,
           timeDifference: timeDifference,
           getModalComment: getModalComment,

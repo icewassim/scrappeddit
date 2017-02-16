@@ -1,5 +1,5 @@
 <div ng-controller="boardController as bctl" class="grid">
     <div class="grid-sizer"></div>
-    <comment-subreddit ng-repeat="comment in bctl.comments"  comment="comment"></comment-subreddit>
+    <comment-subreddit mouseenter-comment="bctl.updateHoveredComment(comment)"  ng-repeat="comment in bctl.comments"  comment="comment"></comment-subreddit>
     <popup-hover hovered-comment="bctl.hoveredComment"></popup-hover>
 </div>

@@ -6,7 +6,7 @@
  Generates Random colors, fonts Scribbles from Reddit comments, Idea Inspired from [Candy Chang Artwork](http://beforeidie.cc/site/about/)
 
 #Demo
-https://icewassim.github.io/scrappeddit/
+https://icewassim.github.io/scrappeddit/#/r/AskReddit/comments/7n1viu/whats_on_your_bucket_list/
 
 #Unit Tests
  - npm test
